@@ -1,0 +1,125 @@
+@import './variables.scss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: hsl(255, 11%, 22%);
+}
+
+.header-container {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 20px 30px 20px;
+
+  #menuToggle {
+    margin-top: 5px;
+
+    a {
+      text-decoration: none;
+      color: hsl(0, 0%, 75%);
+    }
+
+    input {
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+
+      @media only screen and (min-width: $desktop) {
+        display: none;
+      }
+    }
+
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      background-color: hsl(0, 0%, 75%);
+      border-radius: 3px;
+
+      @media only screen and (min-width: $desktop) {
+        display: none;
+      }
+    }
+
+    input:checked ~ ul {
+      display: block;
+    }
+  }
+
+  #menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    margin: 20px 5px;
+    padding: 20px 0;
+    text-align: center;
+    background: hsl(257, 27%, 26%);
+    border-radius: 10px;
+    list-style-type: none;
+
+    li {
+      padding: 15px 0;
+      display: block;
+      list-style-type: none;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+
+    hr {
+      width: 90%;
+      border-color: hsl(0, 0%, 75%);
+      margin: 20px auto;
+    }
+
+    button {
+      width: 80%;
+      height: 45px;
+      background-color: hsl(180, 66%, 49%);
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      margin: 11px 0 0 0;
+      position: relative;
+      padding: 0;
+      transform-origin: unset;
+      transform: unset;
+      transition: unset;
+      text-decoration: none;
+      background: none;
+
+      a {
+        li {
+          cursor: pointer;
+          margin: 0;
+          padding: 0 20px;
+          position: relative;
+          text-decoration: none;
+          font-size: 1.2em;
+        }
+        &:hover {
+          color: #8d8b8b;
+        }
+      }
+    }
+  }
+}
