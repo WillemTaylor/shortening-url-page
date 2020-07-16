@@ -25,7 +25,7 @@
             <li>Login</li>
           </a>
           <a v-scroll-to="'#signup'">
-            <button>Sign Up</button>
+            <button class="button">Sign Up</button>
           </a>
         </ul>
       </div>

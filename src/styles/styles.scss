@@ -12,12 +12,24 @@ body {
   color: hsl(255, 11%, 22%);
 }
 
+.button {
+  height: 45px;
+  background-color: hsl(180, 66%, 49%);
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
 .header-container {
   position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 40px 20px 30px 20px;
+  margin: 40px 20px 20px 20px;
+  z-index: 1;
 
   #menuToggle {
     margin-top: 5px;
@@ -84,15 +96,7 @@ body {
 
     button {
       width: 80%;
-      height: 45px;
-      background-color: hsl(180, 66%, 49%);
-      border-radius: 30px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      border: none;
       margin-bottom: 20px;
-      cursor: pointer;
     }
 
     @media only screen and (min-width: $desktop) {
@@ -121,5 +125,74 @@ body {
         }
       }
     }
+  }
+}
+
+.intro-container {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  img {
+    height: 85vw;
+    max-height: 482px;
+    float: right;
+    position: relative;
+    left: 150px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 2.4em;
+    line-height: 45px;
+    letter-spacing: -0.02em;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  p {
+    color: #8d8b8b;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  button {
+    width: 200px;
+    margin-top: 10px;
+  }
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 30px 0 30px;
+  height: 150px;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 10px;
+
+  img {
+    float: right;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  input {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    width: 70%;
+    align-self: center;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-indent: 15px;
+  }
+
+  button {
+    position: absolute;
+    width: 70%;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 85px;
   }
 }
