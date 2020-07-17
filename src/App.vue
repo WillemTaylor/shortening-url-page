@@ -2,21 +2,21 @@
   <div>
     <Header />
     <Intro />
-    <Link />
+    <Statistics />
   </div>
 </template>
 
 <script>
 import Header from "./components/header.vue";
 import Intro from "./components/intro.vue";
-import Link from "./components/link.vue";
+import Statistics from "./components/statistics.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Intro,
-    Link
+    Statistics
   }
 };
 </script>

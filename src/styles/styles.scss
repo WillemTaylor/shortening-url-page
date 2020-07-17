@@ -170,6 +170,8 @@ body {
   height: 150px;
   background-color: hsl(257, 27%, 26%);
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 
   img {
     float: right;
@@ -194,5 +196,55 @@ body {
     align-self: center;
     border-radius: 5px;
     margin-top: 85px;
+  }
+}
+
+.stats-container {
+  background-color: hsl(0, 0%, 93%);
+  position: absolute;
+  margin-top: -72px;
+  z-index: 0;
+  text-align: center;
+
+  h2 {
+    font-size: 1.7em;
+    position: relative;
+    margin-top: 150px;
+  }
+
+  p {
+    color: #8d8b8b;
+    margin: 0 20px;
+  }
+
+  .card {
+    background-color: white;
+    margin: 80px 20px;
+    border-radius: 5px;
+    padding-bottom: 30px;
+
+    .circle {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: hsl(257, 27%, 26%);
+      display: flex;
+      margin: auto;
+      position: relative;
+      top: -43px;
+
+      img {
+        margin: auto;
+      }
+    }
+
+    h3 {
+      margin-top: -10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0 20px;
+    }
   }
 }
